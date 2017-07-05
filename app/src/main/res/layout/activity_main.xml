@@ -9,38 +9,65 @@
     tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp">
 
-
     <LinearLayout
-        android:layout_width="368dp"
+        android:background="#009968"
+        android:gravity="center_horizontal"
+        android:id="@+id/LinearLayout1"
         android:layout_height="495dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        android:layout_width="368dp"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
 
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:gravity="center_vertical"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent">
 
-        <view
-            class="android.support.v4.widget.Space"
-            id="@+id/view"
-            layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <EditText
+                android:ems="10"
+                android:hint="cari kata"
+                android:id="@+id/input"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="wrap_content">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
+                <requestfocus>
+                </requestfocus></EditText>
+
+            <imagebutton
+                android:background="@android:drawable/btn_default"
+                android:id="@+id/bSearch"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:src="@android:drawable/ic_menu_search">
+            </imagebutton></LinearLayout>
+
+        <textview
+            android:id="@+id/output"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            android:layout_width="match_parent">
+
+            <view
+                android:background="@android:color/darker_gray"
+                android:id="@+id/view1"
+                android:layout_height="2dp"
+                android:layout_width="wrap_content">
+
+                <button
+                    android:background="@android:drawable/btn_default"
+                    android:drawableleft="@android:drawable/ic_input_add"
+                    android:id="@+id/bTambah"
+                    android:layout_height="wrap_content"
+                    android:layout_margintop="10dp"
+                    android:layout_width="wrap_content"
+                    android:text="tambah kata">
+
+                </button></view></textview></LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
